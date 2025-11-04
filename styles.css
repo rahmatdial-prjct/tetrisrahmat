@@ -1,0 +1,50 @@
+/* Menggunakan font yang bersih dan modern */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1a1a2e; /* Latar belakang gelap untuk kontras */
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Gaya untuk kanvas (papan permainan) */
+#tetrisCanvas {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 8px solid #3c0080; /* Border tebal ungu tua */
+    border-radius: 12px;
+    background-color: #0d0d1a; /* Latar belakang papan yang sangat gelap */
+    touch-action: none; /* Mencegah tindakan sentuh default seperti scrolling */
+}
+
+/* Gaya untuk tombol kontrol */
+.control-button {
+    transition: all 0.1s ease-in-out;
+    box-shadow: 0 4px #1a1a2e;
+    user-select: none;
+}
+
+.control-button:active {
+    box-shadow: 0 1px #1a1a2e;
+    transform: translateY(3px);
+}
+
+/* Gaya khusus untuk area permainan di perangkat mobile */
+@media (max-width: 768px) {
+    .game-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-panel {
+        order: -1; /* Pindahkan info panel ke atas di mobile */
+        width: 100%;
+        max-width: 320px;
+        margin-bottom: 20px;
+    }
+    .canvas-wrapper {
+        margin: 0;
+    }
+}
+
